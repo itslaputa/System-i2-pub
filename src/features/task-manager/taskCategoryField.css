@@ -1,0 +1,206 @@
+.task-category-field {
+  display: grid;
+  gap: 12px;
+}
+
+.task-category-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(19, 32, 34, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #132022;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.task-category-trigger:hover {
+  transform: translateY(-1px);
+}
+
+.task-category-trigger:focus-visible {
+  outline: none;
+  border-color: #0f7b6c;
+  box-shadow: 0 0 0 4px rgba(15, 123, 108, 0.14);
+}
+
+.task-category-trigger-label {
+  text-align: left;
+  font-weight: 600;
+}
+
+.task-category-trigger-label.is-placeholder {
+  color: #6c8480;
+  font-weight: 500;
+}
+
+.task-category-trigger-meta {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0f7b6c;
+  white-space: nowrap;
+}
+
+.task-category-panel {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid rgba(19, 32, 34, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.48);
+}
+
+.task-category-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.task-category-crumb {
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  background: rgba(15, 123, 108, 0.08);
+  color: #0f7b6c;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.task-category-status {
+  margin: 0;
+  color: #49605d;
+}
+
+.task-category-status.is-error {
+  color: #a13d3d;
+}
+
+.task-category-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.task-category-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(19, 32, 34, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.task-category-option:hover {
+  transform: translateY(-1px);
+  border-color: rgba(15, 123, 108, 0.24);
+  box-shadow: 0 14px 30px rgba(19, 32, 34, 0.08);
+}
+
+.task-category-option-title {
+  flex: 1;
+  font-weight: 700;
+  color: #132022;
+}
+
+.task-category-option-meta {
+  font-size: 0.82rem;
+  color: #49605d;
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .task-category-option {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .task-category-option-meta {
+    text-align: left;
+    white-space: normal;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .task-category-trigger {
+    border-color: rgba(236, 244, 241, 0.12);
+    background: rgba(7, 12, 13, 0.8);
+    color: #ecf4f1;
+  }
+
+  .task-category-trigger-label.is-placeholder,
+  .task-category-status,
+  .task-category-option-meta {
+    color: #b2c8c2;
+  }
+
+  .task-category-status.is-error {
+    color: #f0a5a5;
+  }
+
+  .task-category-panel,
+  .task-category-option {
+    border-color: rgba(236, 244, 241, 0.08);
+    background: rgba(15, 23, 25, 0.76);
+  }
+
+  .task-category-crumb {
+    background: rgba(15, 123, 108, 0.18);
+    color: #89d9ca;
+  }
+
+  .task-category-option-title {
+    color: #ecf4f1;
+  }
+}
+
+.task-category-trigger,
+.task-category-panel,
+.task-category-option {
+  border-color: var(--surface-border-soft);
+}
+
+.task-category-panel,
+.task-category-option {
+  box-shadow: var(--surface-highlight), var(--surface-shadow-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  .task-category-trigger {
+    border-color: var(--surface-border-mid);
+    background: rgba(9, 17, 18, 0.86);
+    box-shadow: var(--surface-highlight);
+  }
+
+  .task-category-panel,
+  .task-category-option {
+    border-color: var(--surface-border-soft);
+    background:
+      linear-gradient(180deg, rgba(17, 31, 32, 0.94), rgba(12, 22, 23, 0.9));
+    box-shadow: var(--surface-highlight), var(--surface-shadow-soft);
+  }
+
+  .task-category-crumb {
+    border: 1px solid var(--surface-border-soft);
+    background: rgba(15, 123, 108, 0.14);
+  }
+}

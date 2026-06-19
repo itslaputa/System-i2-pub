@@ -1,0 +1,137 @@
+.settings-category-log {
+  display: grid;
+  gap: 20px;
+}
+
+.settings-category-log-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.settings-category-log-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.settings-category-log-button {
+  min-height: 44px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(19, 32, 34, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #132022;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.settings-category-log-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(15, 123, 108, 0.22);
+  box-shadow: 0 14px 30px rgba(19, 32, 34, 0.08);
+}
+
+.settings-category-log-button.is-primary {
+  border: none;
+  background: linear-gradient(135deg, #0f7b6c 0%, #195a83 100%);
+  color: #f4fbf8;
+  box-shadow: 0 14px 32px rgba(25, 90, 131, 0.18);
+}
+
+.settings-category-log-status {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(19, 32, 34, 0.06);
+  color: #27403d;
+}
+
+.settings-category-log-status.is-error {
+  background: rgba(161, 61, 61, 0.12);
+  color: #a13d3d;
+}
+
+.settings-category-log-empty {
+  margin: 0;
+  padding: 18px;
+  border: 1px dashed rgba(19, 32, 34, 0.14);
+  border-radius: 18px;
+  color: #49605d;
+}
+
+.settings-category-log-list {
+  display: grid;
+  gap: 10px;
+}
+
+.settings-category-log-line {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(19, 32, 34, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #132022;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  .settings-category-log-button {
+    border-color: rgba(236, 244, 241, 0.12);
+    background: rgba(7, 12, 13, 0.8);
+    color: #ecf4f1;
+  }
+
+  .settings-category-log-status {
+    background: rgba(236, 244, 241, 0.08);
+    color: #c3d6d1;
+  }
+
+  .settings-category-log-status.is-error {
+    background: rgba(161, 61, 61, 0.24);
+    color: #f0a5a5;
+  }
+
+  .settings-category-log-empty,
+  .settings-category-log-line {
+    border-color: rgba(236, 244, 241, 0.08);
+    background: rgba(15, 23, 25, 0.76);
+    color: #ecf4f1;
+  }
+}
+
+.settings-category-log-button,
+.settings-category-log-status,
+.settings-category-log-empty,
+.settings-category-log-line {
+  border-color: var(--surface-border-soft);
+}
+
+.settings-category-log-status,
+.settings-category-log-empty,
+.settings-category-log-line {
+  box-shadow: var(--surface-highlight), var(--surface-shadow-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  .settings-category-log-button {
+    border-color: var(--surface-border-mid);
+    background: rgba(9, 17, 18, 0.86);
+    box-shadow: var(--surface-highlight);
+  }
+
+  .settings-category-log-status,
+  .settings-category-log-empty,
+  .settings-category-log-line {
+    border-color: var(--surface-border-soft);
+    background:
+      linear-gradient(180deg, rgba(17, 31, 32, 0.94), rgba(12, 22, 23, 0.9));
+    box-shadow: var(--surface-highlight), var(--surface-shadow-soft);
+  }
+}

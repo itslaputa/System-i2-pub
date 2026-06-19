@@ -1,0 +1,381 @@
+.settings-category-editor {
+  display: grid;
+  gap: 20px;
+}
+
+.settings-category-editor-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(340px, 34vw, 480px);
+  gap: 20px;
+  align-items: start;
+}
+
+.settings-category-editor-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.settings-category-editor-inspector-rail {
+  position: relative;
+  min-height: 1px;
+  min-width: 0;
+}
+
+.settings-category-editor-panel.is-inspector {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  max-height: calc(100dvh - 140px);
+  overflow: auto;
+  align-self: start;
+}
+
+.settings-category-editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.settings-category-editor-button {
+  min-height: 44px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(19, 32, 34, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #132022;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.settings-category-editor-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: rgba(15, 123, 108, 0.22);
+  box-shadow: 0 14px 30px rgba(19, 32, 34, 0.08);
+}
+
+.settings-category-editor-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.settings-category-editor-button.is-primary {
+  border: none;
+  background: linear-gradient(135deg, #0f7b6c 0%, #195a83 100%);
+  color: #f4fbf8;
+  box-shadow: 0 14px 32px rgba(25, 90, 131, 0.18);
+}
+
+.settings-category-editor-button.is-danger {
+  border-color: rgba(161, 61, 61, 0.32);
+  background: rgba(161, 61, 61, 0.12);
+  color: #8f2f2f;
+}
+
+.settings-category-editor-status {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(19, 32, 34, 0.06);
+  color: #27403d;
+}
+
+.settings-category-editor-status.is-error {
+  background: rgba(161, 61, 61, 0.12);
+  color: #a13d3d;
+}
+
+.settings-category-editor-tree {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-category-editor-empty {
+  margin: 0;
+  padding: 18px;
+  border: 1px dashed rgba(19, 32, 34, 0.14);
+  border-radius: 18px;
+  color: #49605d;
+}
+
+.settings-category-editor-row {
+  width: calc(100% - var(--row-offset, 0px));
+  margin-left: var(--row-offset, 0px);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 10px 12px;
+  border: 1px solid rgba(19, 32, 34, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-category-editor-row-toggle,
+.settings-category-editor-row-select {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.settings-category-editor-row-toggle {
+  width: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(15, 123, 108, 0.18);
+  border-radius: 14px;
+  color: #0f7b6c;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.settings-category-editor-row-toggle:hover {
+  transform: translateY(-1px);
+  border-color: rgba(15, 123, 108, 0.32);
+  background: rgba(15, 123, 108, 0.08);
+}
+
+.settings-category-editor-row-toggle.is-collapsed {
+  background: rgba(15, 123, 108, 0.12);
+}
+
+.settings-category-editor-row-select {
+  width: 100%;
+  display: grid;
+  gap: 4px;
+  padding: 2px 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.settings-category-editor-row.is-root {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.settings-category-editor-row.is-nested {
+  background: rgba(15, 123, 108, 0.08);
+}
+
+.settings-category-editor-row:hover {
+  transform: translateY(-1px);
+  border-color: rgba(15, 123, 108, 0.24);
+  box-shadow: 0 14px 30px rgba(19, 32, 34, 0.08);
+}
+
+.settings-category-editor-row.is-selected {
+  border-color: rgba(15, 123, 108, 0.42);
+  box-shadow: 0 12px 24px rgba(15, 123, 108, 0.12);
+}
+
+.settings-category-editor-row-title {
+  font-weight: 700;
+  color: #132022;
+}
+
+.settings-category-editor-row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  font-size: 0.84rem;
+  color: #49605d;
+}
+
+.settings-category-editor-inspector {
+  display: grid;
+  gap: 14px;
+}
+
+.settings-category-editor-field {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-category-editor-inline-field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.settings-category-editor-field span {
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4b6461;
+}
+
+.settings-category-editor-input,
+.settings-category-editor-readonly {
+  min-height: 48px;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid rgba(19, 32, 34, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #132022;
+  font: inherit;
+}
+
+.settings-category-editor-input:focus {
+  outline: none;
+  border-color: #0f7b6c;
+  box-shadow: 0 0 0 4px rgba(15, 123, 108, 0.14);
+}
+
+.settings-category-editor-readonly {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.settings-category-editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.settings-category-editor-log-button {
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .settings-category-editor-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-category-editor-inline-field {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-category-editor-inspector-rail {
+    position: static;
+  }
+
+  .settings-category-editor-panel.is-inspector {
+    position: static;
+    width: auto;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .settings-category-editor-button,
+  .settings-category-editor-input,
+  .settings-category-editor-readonly {
+    border-color: rgba(236, 244, 241, 0.12);
+    background: rgba(7, 12, 13, 0.8);
+    color: #ecf4f1;
+  }
+
+  .settings-category-editor-button.is-danger {
+    border-color: rgba(240, 165, 165, 0.28);
+    background: rgba(161, 61, 61, 0.22);
+    color: #f5c3c3;
+  }
+
+  .settings-category-editor-status {
+    background: rgba(236, 244, 241, 0.08);
+    color: #c3d6d1;
+  }
+
+  .settings-category-editor-status.is-error {
+    background: rgba(161, 61, 61, 0.24);
+    color: #f0a5a5;
+  }
+
+  .settings-category-editor-empty,
+  .settings-category-editor-row {
+    border-color: rgba(236, 244, 241, 0.08);
+    background: rgba(15, 23, 25, 0.76);
+  }
+
+  .settings-category-editor-row-toggle {
+    border-color: rgba(137, 217, 202, 0.18);
+    color: #89d9ca;
+    background: rgba(15, 123, 108, 0.08);
+  }
+
+  .settings-category-editor-row-toggle:hover {
+    border-color: rgba(137, 217, 202, 0.34);
+    background: rgba(15, 123, 108, 0.16);
+  }
+
+  .settings-category-editor-row.is-root {
+    background: rgba(19, 29, 31, 0.86);
+  }
+
+  .settings-category-editor-row.is-nested {
+    background: rgba(15, 123, 108, 0.12);
+  }
+
+  .settings-category-editor-row-title {
+    color: #ecf4f1;
+  }
+
+  .settings-category-editor-row-meta {
+    color: #b2c8c2;
+  }
+}
+
+.settings-category-editor-button,
+.settings-category-editor-input,
+.settings-category-editor-readonly,
+.settings-category-editor-status,
+.settings-category-editor-empty,
+.settings-category-editor-row {
+  border-color: var(--surface-border-soft);
+}
+
+.settings-category-editor-status,
+.settings-category-editor-empty,
+.settings-category-editor-row {
+  box-shadow: var(--surface-highlight), var(--surface-shadow-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  .settings-category-editor-button,
+  .settings-category-editor-input,
+  .settings-category-editor-readonly {
+    border-color: var(--surface-border-mid);
+    background: rgba(9, 17, 18, 0.86);
+    box-shadow: var(--surface-highlight);
+  }
+
+  .settings-category-editor-status,
+  .settings-category-editor-empty,
+  .settings-category-editor-row {
+    border-color: var(--surface-border-soft);
+    background:
+      linear-gradient(180deg, rgba(17, 31, 32, 0.94), rgba(12, 22, 23, 0.9));
+    box-shadow: var(--surface-highlight), var(--surface-shadow-soft);
+  }
+
+  .settings-category-editor-row.is-root {
+    background:
+      linear-gradient(180deg, rgba(19, 34, 35, 0.96), rgba(13, 25, 26, 0.92));
+  }
+
+  .settings-category-editor-row.is-nested {
+    background: rgba(15, 123, 108, 0.14);
+  }
+}

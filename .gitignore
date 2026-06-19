@@ -1,0 +1,32 @@
+node_modules/
+dist/
+
+# Runtime data. Keep the folder placeholder, never commit local user data.
+Data/*
+!Data/.gitkeep
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+runtime-bundle.json
+task_categories.json
+task_category_change_log.log
+project_categories.json
+task_projects.json
+
+# Build/generated outputs.
+src-tauri/target/
+src-tauri/gen/schemas/
+src-tauri/target*/
+
+# Local/editor/system files.
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
