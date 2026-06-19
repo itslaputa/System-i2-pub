@@ -6,39 +6,13 @@ Personal desktop time tracker for logging work, organizing it by projects and ca
 
 System-I2 is local-first: your tasks, comments, projects, categories, and analytics stay on your machine. There is no account system, cloud sync, or hosted backend.
 
-[Download](#download) · [Features](#features) · [Privacy](#privacy-and-data) · [For developers](#for-developers)
+[Download](#download) · [Privacy](#privacy-and-data) · [For developers](#for-developers)
 
 ![Tauri](https://img.shields.io/badge/Tauri-2-24C8DB?style=flat-square)
 ![Rust](https://img.shields.io/badge/Rust-backend-000000?style=flat-square)
 ![SolidJS](https://img.shields.io/badge/SolidJS-frontend-2C4F7C?style=flat-square)
 ![SQLite](https://img.shields.io/badge/SQLite-local%20storage-003B57?style=flat-square)
 ![Local-first](https://img.shields.io/badge/data-local--first-3C873A?style=flat-square)
-
-## What it does
-
-System-I2 is built for people who want a lightweight desktop log of their work without turning it into a team task board or a cloud service.
-
-Use it to answer practical questions:
-
-- What did I spend time on this week?
-- Which projects are taking the most effort?
-- Which categories keep growing over time?
-- What was the context behind a specific work session?
-
-Core workflow:
-
-- Capture work sessions with date, duration, category, project, and comment.
-- Group work by stable task categories for long-term analytics.
-- Track global projects that can contain tasks from many categories.
-- Review time by period, category, project, and trend.
-- Keep all runtime data in a local SQLite/JSON bundle.
-- Create a zip backup of the active local data bundle from the app.
-
-## Who it is for
-
-System-I2 fits personal work tracking, research logs, solo projects, freelance work, study tracking, and any workflow where a local timeline is more useful than a shared task board.
-
-It is not a team project manager, calendar replacement, invoicing system, or hosted analytics product.
 
 ## Download
 
@@ -53,28 +27,6 @@ Latest public release: [System-I2 v1](https://github.com/itslaputa/System-i2-pub
 More options: [latest release](https://github.com/itslaputa/System-i2-pub/releases/latest) · [all releases](https://github.com/itslaputa/System-i2-pub/releases)
 
 The current builds are unsigned. macOS, Windows, and some Linux environments may show a security warning on first launch. macOS is the primary tested desktop target; Windows and Linux builds are produced automatically and should be checked manually on the target system before serious use.
-
-## Features
-
-### Work Log
-
-Record what you worked on, how long it took, which category it belongs to, which project it supports, and any context you want to remember.
-
-### Categories
-
-Maintain an editable task category tree. Category IDs are stable for analytics, while labels can evolve as your workflow changes.
-
-### Projects
-
-Create global projects independently from task categories. A project can collect work from many different categories, which makes it useful for reviewing real effort across a broader goal.
-
-### Analytics
-
-Review logged time across periods, categories, projects, and trends. The app is designed around personal hindsight: what took time, what changed, and where attention went.
-
-### Local data folder
-
-Your data lives in a local folder containing SQLite and JSON files. You choose whether to create a new data folder or attach an existing one on first run.
 
 ## First Run
 
